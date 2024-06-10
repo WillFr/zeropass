@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title> 0 Pass: password registration</title>
+        <link id="theme" rel="stylesheet" href="/style/popup_ocean.css">
+        <link rel="stylesheet" href="/style/popup.css">
+        <script src="/ux/registerPw.js" type="module"></script>
+    </head>
+    <body>
+        <div id="main-card-wrapper" class="card-wrapper horizontal">
+            <div class="card active" id="card-registerUn">
+                <h2>Password creation</h2>
+                <p>
+                    Let's create a username and password for <span id="rpId" class="highlight"></span>
+                </p>
+                <div class="button card-wrapper horizontal">
+                    <div class="card active" id="card-input">
+                        <div class="textsubbutton">
+                            <input type="text" id="username" placeholder="Enter a username" />
+                            <div class="cardlink submit" rel="card-input-2"></div>
+                        </div>
+                    </div>
+                    <div class="card" id="card-input-2">
+                        <div class="textsubbutton">
+                            <input type="text" id="salt" placeholder="Enter an id" />
+                            <div class="submit" id="submit">&nbsp;<span class="helpBtn" rel="help-id">?</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="help" id="help-id">
+            The id allows you to rotate your password when needed.
+            You can for example pick "1" and later pick "2" to generate a new password.
+        </div>
+    </body>
+</html>

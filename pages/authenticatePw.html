@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title> 0 Pass: password authentication</title>
+        <link id="theme" rel="stylesheet" href="/style/popup_ocean.css">
+        <link rel="stylesheet" href="/style/popup.css">
+        <script src="/ux/authenticatePw.js" type="module"></script>
+    </head>
+    <body>
+        <div id="main-card-wrapper" class="card-wrapper horizontal">
+            <div class="card active" id="authenticate-card">
+                Which user would you like to select for <strong><span id="rpId"></span></strong>
+                <ul id="usernames">
+                </ul>
+                <div class="button card-wrapper horizontal">
+                    <div class="card active subbutton cardlink" rel="card-input-1">
+                        Recover <span class="helpBtn" rel="help-recover">?</span>
+                    </div>
+                    <div class="card" id="card-input-1">
+                        <div class="textsubbutton">
+                            <input type="text" id="recoverUsername" placeholder="Enter a username" />
+                            <div class="cardlink submit" rel="card-input-2"></div>
+                        </div>
+                    </div>
+                    <div class="card" id="card-input-2">
+                        <div class="textsubbutton">
+                            <input type="text" id="salt" placeholder="Enter the id" />
+                            <div class="submit" id="generatePassword" rel="card-input-2">&nbsp;<span class="helpBtn" rel="help-id">?</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="help" id="help-id">
+            The id allows you to rotate your password when needed.
+            You can for example pick "1" and later pick "2" to generate a new password.
+        </div>
+        <div class="help" id="help-recover">
+            This option allows you to recover your password solely based on your passphrase. It
+            is useful when you are setting up zero pass on a new browser.
+        </div>
+    </body>
+</html>

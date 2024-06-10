@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Zero Pass</title>
+    <link rel="stylesheet" href="../style/popup.css" />
+    <link rel="stylesheet" href="../style/popup_ocean.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="cartouche">
+      <!-- <img id="logo" src="icons/128.png"/>  -->
+      <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="602" height="600" viewBox="0 0 602 600">
+        <defs>
+          <linearGradient id="logo-gradient" x1="0" y1="0" x2="100%" y2="0" gradientTransform="rotate(3)">
+              <stop offset="0%" stop-color="var(--color-stop)" />
+              <stop offset="28%" stop-color="var(--color-stop)" />
+              <stop offset="30%" stop-color="var(--logo-middle-bg-color)" />
+              <stop offset="35%" stop-color="var(--color-bot)" />
+              <stop offset="100%" stop-color="var(--color-bot)" />
+            </linearGradient>
+        </defs>
+        <path d="M473.382,156.695 C473.000,265.989 365.680,288.545 358.201,294.649 L358.220,315.867 L358.016,315.664 L318.280,355.485 L358.087,395.236 L358.290,395.033 L358.294,400.145 L357.212,399.063 L317.914,438.488 L357.281,477.844 L358.362,476.761 L358.373,489.137 L319.254,528.382 L358.442,567.559 L358.474,604.114 L291.042,674.506 L265.732,674.528 L203.810,615.503 C203.810,615.503 203.404,317.766 203.353,196.327 L358.106,196.190 C372.100,196.178 383.434,184.824 383.422,170.830 L383.384,128.659 C383.372,114.665 372.018,103.331 358.024,103.343 L204.634,103.479 C208.127,60.489 222.822,12.087 287.644,10.566 C408.565,2.481 474.818,53.157 473.382,156.695 Z" class="cls-1"/>
+        <path d="M401.901,171.349 C401.841,194.973 383.159,214.071 360.173,214.006 L171.501,213.469 C148.515,213.403 129.930,194.199 129.990,170.576 L130.092,130.653 C130.151,107.029 148.834,87.931 171.819,87.997 L360.492,88.534 C383.477,88.599 402.062,107.803 402.002,131.427 L401.901,171.349 ZM361.188,140.232 C361.113,127.599 348.852,117.368 333.801,117.379 L197.543,117.485 C182.492,117.496 170.352,127.747 170.426,140.380 L170.550,161.424 C170.625,174.057 182.886,184.289 197.937,184.277 L334.195,184.171 C349.245,184.160 361.386,173.909 361.312,161.276 L361.188,140.232 Z" class="cls-2"/>
+      </svg>
+      <h2 class="title"> Zero Pass</h2>
+    </div>
+    <hr id="underline"/>
+    <div class="center">
+      <section>
+        <h1>Welcome to Zero Pass</h1>
+        <p>
+          Before experimenting with passkeys, we recommend you pin the
+          extension's action button to your Chrome toolbar.
+        </p>
+        <img src="../images/pin-action.png" />
+      </section>
+
+      <section >
+        <h2>A note on encryption</h2>
+
+        <p>
+          Zero Pass allows you to use the extension as a webauthn provider/password manager and import/export 
+          passkeys and manage passwords based on a single strong pass phrase (like a crypto wallet).
+
+          In a nutshell:
+          <ul>
+            <li><strong>Your pass phrase is never saved</strong> (even locally): zero pass only uses a hash of your 
+              passphrase to preserve the content of it from an attack.
+            </li>
+            <li> all of your import/export as well as cloud storage is encrypted with an AES 
+              key generated based on your pass phrase. No one can decrypt it without the hash of your pass phrase.
+            </li>
+            <li>
+              passwords and passkeys are generated just in time, by hashing the RP domain, your username,
+              and the hash of your pass phrase together
+            </li>
+            <li>
+              if you are not using username-less auth (the case for most websites), you automatically recover
+              your credential with <strong>only</strong> your pass phrase and your username
+            </li>
+            <li>
+              for website that are relying on usernameless auth, you can either backup your credential yourself
+              (the files are encrypted and therefore safe to store anywhere) or rely on the cloud sync feature
+            </li>
+          </ul>
+
+          Your local storage is encrypted with a PIN: this mitigates the risk of your data being stolen from the
+          chrome storage directly.
+        </p>
+      </section>
+
+      <section id="popup">
+        <h2>A quick tour...</h2>
+
+        <p>
+         You can manage your passkeys by clicking on the extension icon in your chrome toolbar
+        </p>
+        <video controls autoplay>
+          <source src="./capture.mp4" type="video/mp4">
+         </video>
+
+        You will see a list of your current passkeys and passwords, associated with the username for that website.
+        Each row is expandable on click so you can see what the extension stores locally.
+
+        At the bottom you will find a toolbar with the following menus:
+        <ul>
+          <li>Cloud sync: obtain an API key and automatically sync your passkey backup in the cloud.
+            Your backups are encrypted and cannot be stolen
+          </li>
+          <li>Settings: manage your backups, reset your passphrase, seed the mobile app...</li>
+          <li>Help: to find answers to frequently asked questions</li>
+        </ul>
+      </section>
+
+      <section id="test">
+        <h2>How to test the extension</h2>
+
+        <p>
+          A few websites will let you test the extension: 
+          <ul>
+            <li><a href="https://webauthn.io/">webauthn.io</a>: comes with advanced settings so you can test with and without attestation </li>
+            <li><a href="https://webauthn.me/#">webauthn.me</a>: comes with advanced settings so you can test with and without attestation</li>
+            <li><a href="https://webauthn.lubu.ch/_test/client.html">webauthn.lubu.ch</a>: comes with an open source PHP backend (<a href="https://github.com/lbuchs/WebAuthn">github</a>) but does not handle responses without user handle</li>
+          </ul>
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

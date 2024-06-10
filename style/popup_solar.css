@@ -1,0 +1,37 @@
+:root {
+    --body-border-radius:2px;
+
+    --accent-color: #643900;
+    --accent-accent-color: #b66700;
+    --logo-0-bg-color:#680000;
+    --logo-0-border-color:#b66700;
+    --logo-middle-bg-color:#202020;
+
+    --main-color: #3a2f00;
+    --bg-color: #fffefd;
+    --accent-bg-color: #fff4d7;
+    --active-shade-color: #949494;
+    --active-bg-color: #3a2f00;
+    --disable-bg-color:#555555;
+    --warn-color:#ce5200;
+    --accent-warn-color:#ff7b00; 
+
+    --header-bg-color:#202020;
+    --header-color:#b66700;
+    --row-bg-color:#fff4d7;
+
+    --label-color:#CCCCCC;
+    --label-bg-color:#202020;
+    --input-color:#3a2f00;
+    --input-bg-color:#fff4d7;
+
+    --button-border-color:#643900;
+    --button-color:#643900;
+    --button-bg-color:#fff4d7;
+    --button-border-radius:4px;
+    --button-border-width:1px;
+    --butron-color-active:#c2fe23;
+    --button-bg-color-active:#fff4d7;
+    --button-border-color-active:#3a2f00;
+    --button-border-selected: 2px solid #949494;
+}

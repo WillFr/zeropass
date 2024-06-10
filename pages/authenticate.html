@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title> 0 Pass: passkey authentication</title>
+        <link id="theme" rel="stylesheet" href="/style/popup_ocean.css">
+        <link rel="stylesheet" href="/style/popup.css">
+        <script src="/ux/authenticate.js" type="module"></script>
+    </head>
+    <body>
+        <div id="main-card-wrapper" class="card-wrapper horizontal">
+            <div class="card active" id="authenticate-card">
+                <div>
+                    Which user would you like to select <strong><span id="rpId"></span></strong>
+                    <ul id="usernames">
+                        <li>
+                            <div class="button card-wrapper horizontal">
+                                <div class="card active subbutton cardlink" rel="card-input">
+                                    Recover <span class="helpBtn" rel="help-recover">?</span>
+                                </div>
+                                <div class="card" id="card-input">
+                                    <div class="textsubbutton">
+                                        <input type="text" id="recoverUsername" placeholder="Enter a username" />
+                                        <div class="cardlink submit" rel="card-attest"></div>
+                                    </div>
+                                </div>
+                                <div class="card" id="card-attest">
+                                    <div class="textsubbutton">
+                                        <select id="recoverAttest">
+                                            <option value="" disabled selected>Attestation type</option>
+                                            <option value="none">None</option>
+                                            <option value="direct">Direct</option>
+                                        </select>
+                                        <div class="submit" id="recoverUsernameOk"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="help" id="help-recover">
+            This option allows you to recover your passkey solely based on your passphrase. It
+            is useful when you are setting up zero pass on a new browser.
+        </div>
+    </body>
+</html>

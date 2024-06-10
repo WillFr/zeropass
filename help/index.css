@@ -1,0 +1,35 @@
+p {
+  hyphens: initial;
+}
+
+.flex {
+  display: flex;
+  gap: 0.25em;
+  margin: 0.5em 0;
+  align-items: flex-end;
+}
+
+.spaced {
+  margin: 0.5em 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+button {
+  white-space: nowrap;
+}
+html{
+  width: unset;
+  border-radius: unset;
+  overflow: unset;
+}
+div.center {
+  height: unset;
+}
+body{
+  width: 80%;
+  margin: auto;
+  padding: 10px 25px 10px 25px;
+}

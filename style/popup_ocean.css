@@ -1,0 +1,37 @@
+:root {  
+    --body-border-radius:2px;
+
+    --accent-color: #003068;
+    --accent-accent-color: #0054b4;
+    --logo-0-bg-color:#00c6d4;
+    --logo-0-border-color:#0054b4;
+    --logo-middle-bg-color:#CCC;
+
+    --main-color: #202020;
+    --bg-color: #fffefd;
+    --accent-bg-color: #0054b4;
+    --active-shade-color: #f3f3f3;
+    --active-bg-color: #3a2f00;
+    --disable-bg-color:#555555;
+    --warn-color:#ce5200;
+    --accent-warn-color:#ff7b00; 
+    --header-bg-color:#dfeaf5;
+    --header-color:var(--accent-accent-color);
+    --row-bg-color:#ffffff;
+
+    --label-color:#dfeaf5;
+    --label-bg-color:#202020;
+    --input-color:#202020;
+    --input-bg-color:#dfeaf5;
+
+    --button-border-color:#003068;
+    --button-color:#003068;
+    --button-bg-color:#dfeaf5;
+    --button-border-radius:50px;
+    --button-border-width:1px;
+    --button-color-active:#b1d6fa;
+    --button-bg-color-active:#003068;
+    --button-bg-color-hover:#c9def3;
+    --button-border-color-active:#dfeaf5;
+    --button-border-selected: 2px solid #949494;
+}

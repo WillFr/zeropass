@@ -1,0 +1,41 @@
+:root {
+    --body-border-radius:15px;
+
+    --accent-color: #9efc29;
+    --accent-accent-color: #c2fe23;
+    --logo-0-bg-color:#213000;
+    --logo-0-border-color:#c2fe23;
+    --logo-middle-bg-color:#202020;
+
+    --main-color: #c2fe23;
+    --bg-color: #484848;
+    --accent-bg-color: #202020; 
+    --active-shade-color: #d5ff7b;
+    --active-bg-color: #213000;
+    --disable-bg-color:#555555;
+    --warn-color:orange;
+    --accent-warn-color:#ff7b00;
+    --header-bg-color:#202020;
+    --header-color:var(--accent-color);
+    --row-bg-color:#555555;
+
+    --label-color:#333333;
+    --label-bg-color:#9efc29;
+    --input-color:#c2fe23;
+    --input-bg-color:#202020;
+
+    --button-border-color:#9efc29;
+    --button-color:#9efc29;
+    --button-bg-color:#202020;
+    --button-border-radius:45px;
+    --button-border-width:1px;
+    --button-color-active:#c2fe23;
+    --button-bg-color-active:#213000;
+    --button-border-color-active:var(--main-color);
+    --button-border-selected: 2px solid #d5ff7b;
+}
+#logo {
+    height: 40px;
+    width: 40px;
+    margin: 0px;
+}

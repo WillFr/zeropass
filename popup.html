@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero Pass</title>
+    <link id="theme" rel="stylesheet" href="style/popup_ocean.css">
+    <link rel="stylesheet" href="style/popup.css">
+    <script src="third-party/QRCode/QRcode.js"></script>
+    <script src="ux/popup.js" type="module"></script>
+  </head>
+  <body>
+    <div id="cartouche">
+      <!-- <img id="logo" src="icons/128.png"/>  -->
+      <svg id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="602" height="600" viewBox="0 0 602 600">
+        <defs>
+          <linearGradient id="logo-gradient" x1="0" y1="0" x2="100%" y2="0" gradientTransform="rotate(3)">
+              <stop offset="0%" stop-color="var(--color-stop)" />
+              <stop offset="28%" stop-color="var(--color-stop)" />
+              <stop offset="30%" stop-color="var(--logo-middle-bg-color)" />
+              <stop offset="35%" stop-color="var(--color-bot)" />
+              <stop offset="100%" stop-color="var(--color-bot)" />
+            </linearGradient>
+        </defs>
+        <path d="M473.382,156.695 C473.000,265.989 365.680,288.545 358.201,294.649 L358.220,315.867 L358.016,315.664 L318.280,355.485 L358.087,395.236 L358.290,395.033 L358.294,400.145 L357.212,399.063 L317.914,438.488 L357.281,477.844 L358.362,476.761 L358.373,489.137 L319.254,528.382 L358.442,567.559 L358.474,604.114 L291.042,674.506 L265.732,674.528 L203.810,615.503 C203.810,615.503 203.404,317.766 203.353,196.327 L358.106,196.190 C372.100,196.178 383.434,184.824 383.422,170.830 L383.384,128.659 C383.372,114.665 372.018,103.331 358.024,103.343 L204.634,103.479 C208.127,60.489 222.822,12.087 287.644,10.566 C408.565,2.481 474.818,53.157 473.382,156.695 Z" class="cls-1"/>
+        <path d="M401.901,171.349 C401.841,194.973 383.159,214.071 360.173,214.006 L171.501,213.469 C148.515,213.403 129.930,194.199 129.990,170.576 L130.092,130.653 C130.151,107.029 148.834,87.931 171.819,87.997 L360.492,88.534 C383.477,88.599 402.062,107.803 402.002,131.427 L401.901,171.349 ZM361.188,140.232 C361.113,127.599 348.852,117.368 333.801,117.379 L197.543,117.485 C182.492,117.496 170.352,127.747 170.426,140.380 L170.550,161.424 C170.625,174.057 182.886,184.289 197.937,184.277 L334.195,184.171 C349.245,184.160 361.386,173.909 361.312,161.276 L361.188,140.232 Z" class="cls-2"/>
+      </svg>
+      <h2 class="title"> Zero Pass</h2>
+    </div>
+    <hr id="underline"/>
+    <div class="center">
+      <div id="top">
+        <table id="passkey-table">
+          <thead>
+            <tr>
+              <th>RP id</th>
+              <th>Username</th>
+              <th class="tools">
+                <ul class="row-tools">
+                  <li><span class="toolicon delete" title="delete">&#x274C;</span></li>
+                  <li>
+                    <span class="toolicon copy" title="copy password to clipboard">
+                      <svg id='Copy_24' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><rect width='24' height='24' stroke='none' fill='#000000' opacity='0'/>
+                          <g transform="matrix(1 0 0 1 12 12)" >
+                          <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-12, -12)" d="M 4 2 C 2.895 2 2 2.895 2 4 L 2 17 C 2 17.552 2.448 18 3 18 C 3.552 18 4 17.552 4 17 L 4 4 L 17 4 C 17.552 4 18 3.552 18 3 C 18 2.448 17.552 2 17 2 L 4 2 z M 8 6 C 6.895 6 6 6.895 6 8 L 6 20 C 6 21.105 6.895 22 8 22 L 20 22 C 21.105 22 22 21.105 22 20 L 22 8 C 22 6.895 21.105 6 20 6 L 8 6 z M 8 8 L 20 8 L 20 20 L 8 20 L 8 8 z" stroke-linecap="round" />
+                          </g>
+                      </svg>
+                    </span>
+                  </li>
+                  <li><span class="toolicon help" title="about"> &#x2754; </span> </li>
+                </ul>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+      <div id="cloud-tab" class="tab collapsable collapsed">
+        <hr />
+        <div class="card-wrapper horizontal">
+          <div id="card-cloud-main" class="card active">
+            <p> 
+              Enable cloud sync with an API key. All your settings will be synced accross devices.
+            </p>
+            <p> 
+              <label>Api key <input type="text" disabled="true" size="35" name="apiKeyInput" id="apiKeyInput" placeholder="No api key in use"/></label>
+            </p>
+            <p id="cloud-info"></p>
+            <ul class="actions">
+              <li><div class="button" id="buyApiKeyBtn">Get an api key</div></li>
+              <li><div class="button cardlink" rel="card-cloud-setup">I have/had an api key</div></li>
+              <li><div class="button confirm"  id="deleteCloudData" confirm="Are you sure ?">Delete cloud data</div></li>
+              <li><div class="button" id="cloudSyncBtn">Sync</div></li>
+            </ul>
+          </div>
+          <div id="card-cloud-setup" class="card">
+            <p>Either use the email used to obtain the key with the same pass 
+              phrase, or enter the api key directly</p>
+            <div class="button card-wrapper horizontal">
+              <div class="card active subbutton cardlink" rel="email-input">Lookup by email</div>
+              <div class="card" id="email-input">
+                  <div class="textsubbutton">
+                      <input type="text" id="apiEmail" placeholder="Enter your email" />
+                      <div class="submit" id="recoverApiKeyByEmailBtn"></div>
+                  </div>
+              </div>
+              <div class="card" id="email-notFound">
+                Could not find an api key
+            </div>
+            </div>
+            <div class="button card-wrapper horizontal">
+              <div class="card active subbutton cardlink" rel="apiKey-input">Enter the API key</div>
+              <div class="card" id="apiKey-input">
+                  <div class="textsubbutton">
+                      <input type="text" id="apiKey" placeholder="type the api key" />
+                      <div class="submit" id="saveApiKeyBtn"></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="settings-tab" class="tab collapsable collapsed">
+        <hr />
+        <div class="card-wrapper vertical" id="settings-cards">
+          <div class="card active" id="card-setting-main">
+            <h3> Settings </h3>
+            <ul id="settings-list">
+              <li>
+                <label>
+                  Theme: 
+                  <select id="themePicker">
+                    <option value="popup_ohacker.css">Original hacker</option>
+                    <option value="popup_solar.css">Solarized</option>
+                    <option value="popup_ocean.css">Ocean blue</option>
+                  </select>
+                </label>
+              </li>
+              <li>  
+              <label class="checkbox" title="Improves the user experience by handling username and password fields, as well as conditional mediation">
+                Allow script injection
+                <input id="allowScriptsCheckbox" type="checkbox" class="slider" />
+                <div>
+                  <span class="on">on</span>
+                  <span class="off">off</span>
+                  <span class="slider"></span>
+                </div>
+              </label>
+              </li>
+              <li>
+                <table class="toolpanel">
+                  <tr>
+                    <td><div class="button cardlink" rel="card-warn">Reset pass phrase</div></td>
+                    <td><div class="button cardlink" rel="card-qrcode">Seed a device</div></td>
+                  </tr>
+                  <tr>
+                    <td><div class="button cardlink" rel="card-backup">Backup/Restore</div></td>
+                    <td><div class="button cardlink" rel="card-logs">View logs</div></td>
+                  </tr>
+                </table>
+              </li>
+            </ul>
+            <table id="disabled-domains-table">
+              <thead>
+                <tr>
+                  <th>Disabled domains</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+          <div class="card" id="card-warn">
+            <h3> Warning </h3>
+            <p> Setting up a new passphrase will render all your export unusable
+              and will prevent you from using the recover feature on existing passkeys
+            </p>
+            <div class="toolbar">
+              <div class="button" id="backupPreResetBtn">Backup my data first</div>
+              <div class="button cardlink" rel="card-newSeed">Continue anyway</div>
+            </div>
+          </div>
+          <div class="card" id="card-qrcode">
+            <h3> Scan this QR code from your app </h3>
+            <div id="qrcode"></div>
+          </div>
+          <div class="card" id="card-logs">
+            <ul id="logsList">
+
+            </ul>
+          </div>
+          <div class="card" id="card-backup">
+            <p> 
+              Offline backups export your passkeys to a file that you can import later, on any device. If you provide a pass phrase, your
+              backups are encrypted and can be safely stored anywhere.
+            </p>
+            <div class="toolbar">
+              <div class="button" id="export">backup</div>
+              <div class="button" id="import">import</div>
+              <input type="file" id="importInput" />
+            </div> 
+          </div>
+        </div>
+      </div>
+      <div id="help-tab" class="tab collapsable collapsed">
+        <hr />
+        <h3> Help </h3>
+        <p> 
+          <a target="_blank" href="help/index.html"> About </a> |
+          <a target="_blank" href="https://webauthn.io/"> Webautn.io </a> | 
+          <a target="_blank" href="https://webauthn.me/"> webauthn.me </a> | 
+          <a target="_blank" href="https://demo.yubico.com/webauthn-technical/"> Yubico demo </a>
+        </p>
+        <p>
+          <strong>Nothing happen when i select "use native passkey"</strong><br />
+          When you select this option, Zero pass records your preferences but you need to retry
+          the action. 
+        </p>
+      </div>
+      <div id="create-tab" class="tab collapsable collapsed">
+        <hr />
+        <h3> Create password</h3>
+        <ul id="settings-list">
+          <li>
+            <label>
+              Domain <input type="text" id="createPasswordFor" />
+            </label>
+          </li>
+          <li>
+            <label>
+              Username <input type="text" id="createPasswordUsername" />
+            </label>
+          </li>
+          <li>
+            <label>
+              &#35 <span class="helpbtn" rel="help-passwordIndex">?</span> <input type="text" id="createPasswordSalt" value="0"/>
+            </label>
+          </li>
+          <div class="button" id="createPassword">Create and copy to clipboard</div>
+          <div class="button" id="copyPassword">Copy only <span class="helpbtn" rel="help-pwCopyOnly">?</span></div>
+        </ul>
+
+      </div>
+      
+      <div id="confirm-tab" class="tab collapsable collapsed">
+        <hr />
+        <h3> Are you sure ?</h3>
+          <p id="confirm-ask"></p>
+          <div class="toolbar">
+            <div class="button" id="confirm-accept">Yes</div>
+            <div class="button" id="confirm-reject">No </div>
+          </div>
+        </ul>
+
+      </div>
+    </div> 
+    <div id="toolbar">
+      <div id="cloudsync-btn" class="toolicon button tab-key" rel="cloud-tab" title="cloud sync">
+        <svg fill="#FFF" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+        viewBox="230 120 450 450" xml:space="preserve">
+        <path d="M313.14,392.5l61.1,59.1c19.7-20.4,46.2-31.7,74.601-31.7c27.7,0,53.799,10.8,73.399,30.401L582.34,390.2
+			c-35.701-35.7-83.102-55.3-133.5-55.3C397.239,334.9,349.04,355.3,313.14,392.5z"/>
+		    <path d="M448.84,291.9c61.5,0,119.399,23.8,163.1,67.1l59.799-60.399c-59.699-59.2-138.898-91.7-222.899-91.7
+			c-42.7,0-84.2,8.4-123.3,24.9c-37.7,16-71.601,38.8-100.7,67.9l60.1,60.101C328.739,316,386.939,291.9,448.84,291.9z"/>
+      <circle cx="448.84" cy="506.199" r="46"/>
+        <rect id="disableBar" x="260" y="320" width="400" height="90" transform="rotate(45)" style="fill: rgb(255, 0, 0);transform-origin: center;transform-box: fill-box;"   />
+        </svg>
+      </div>
+      <div id="settings-btn" class="toolicon button tab-key" rel="settings-tab" title="settings">&#x2699;</div>
+      <div id="help-btn" class="toolicon button tab-key" rel="help-tab" title="help">&#x2754;</div>
+      <div id="create-btn" class="toolicon button tab-key" rel="create-tab" title="passwords">P</div>
+      <div id="lock-btn" class="toolicon button" title="lock">&#x1F512;</div>
+    </div>
+
+    <div class="help" id="help-passwordIndex">
+      If you need to change your password for any reason, input a different value to generate an entirely different password.
+    </div>
+    <div class="help" id="help-pwCopyOnly">
+      You can generate the password on the fly without ever storing it
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> 0 Pass: passkey registration</title>
+        <link id="theme" rel="stylesheet" href="/style/popup_ocean.css">
+        <link rel="stylesheet" href="/style/popup.css">
+        <script src="/ux/register.js" type="module"></script>
+    </head>
+    <body>
+        <div class="card-wrapper horizontal" id="register-card-wrapper">
+            <div class="card active" id="register-card">
+                <p><strong><span id="rpId"></span></strong> wants to register a passkey for the username <strong><span id="username"></span></strong></p>
+                <div class="toolbar">
+                    <div class="button" id="acceptBtn">Accept</div>
+                    <div class="button" id="declineBtn">Decline</div>
+                    <div class="button" id="nativeBtn">
+                        Use Native <span class="helpBtn" rel="help-native">?</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="help" id="help-native">
+            Selecting this option will disable zero pass for this domain. You will have to retry the action to effectively register.
+            You can reactivate the domain in the settings pane.<br />
+            Note: Zero pass cannot use chrome managed passkeys
+        </div>
+    </body>
+</html>

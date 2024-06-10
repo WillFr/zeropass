@@ -1,0 +1,50 @@
+{
+  "name": "Zero Pass",
+  "version": "1.0",
+  "description": "Manage and backup your passkeys.",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Manage your passkeys",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icons/32_3.png",
+      "72": "icons/72_2.png",
+      "128": "icons/128_2.png",
+      "512": "icons/512_2.png"
+    }
+  },
+  "icons": {
+    "32": "icons/32.png",
+    "72": "icons/72_2.png",
+    "128": "icons/128_2.png",
+    "512": "icons/512_2.png"
+  },
+  "permissions": [
+    "webAuthenticationProxy",
+    "storage",
+    "downloads",
+    "tabs"
+  ],
+  "optional_permissions": [
+  ],
+  "externally_connectable": {
+    "matches": [
+      "https://0pass.me/cryptoseed.html?*",
+      "https://www.0pass.me/cryptoseed.html?*",
+      "https://0pass.me/order/success?*",
+      "https://www.0pass.me/order/success?*"]
+  },
+  "host_permissions": [],
+  "optional_host_permissions": [
+  ],
+  "web_accessible_resources":[
+    {
+      "resources": ["images/*.png",  "icons/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
